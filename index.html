@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Professeur Pixel — Le soutien scolaire intelligent pour chaque enfant du
-      Québec
-    </title>
+    <title>Professeur Pixel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -52,7 +49,7 @@
 
       /* ── NAV ── */
       nav {
-        position: fixed;
+        position: relative;
         top: 0;
         left: 0;
         right: 0;
@@ -91,7 +88,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 120px 5% 80px;
+        padding: 10px 5% 80px;
         position: relative;
         overflow: hidden;
       }
@@ -323,9 +320,6 @@
         align-items: flex-start;
         transition: background 0.2s;
       }
-      .problem-card:hover {
-        background: var(--yellow-light);
-      }
       .problem-icon {
         font-size: 24px;
         flex-shrink: 0;
@@ -346,6 +340,7 @@
       }
       .problem-quote-box {
         background: var(--black);
+        height: 100%;
         border-radius: 16px;
         padding: 40px;
         color: var(--white);
@@ -364,7 +359,7 @@
       .problem-quote-attr {
         font-size: 12px;
         color: rgba(255, 255, 255, 0.4);
-        margin-bottom: 32px;
+        margin-bottom: 60px;
       }
       .problem-quote-attr strong {
         color: var(--yellow);
@@ -426,9 +421,6 @@
         position: relative;
         overflow: hidden;
         transition: transform 0.2s;
-      }
-      .solution-card:hover {
-        transform: translateY(-4px);
       }
       .solution-icon {
         font-size: 28px;
@@ -535,9 +527,6 @@
         border: 1px solid var(--gray-200);
         padding: 36px;
         transition: border-color 0.2s;
-      }
-      .audience-card:hover {
-        border-color: var(--yellow);
       }
       .audience-icon {
         font-size: 32px;
@@ -1220,11 +1209,12 @@
       </div>
       <div class="solution-grid">
         <div class="solution-card">
+          <div class="solution-icon"><i class="ph ph-user-check"></i></div>
           <div class="solution-icon"><i class="ph ph-owl"></i></div>
-          <h3>Tuteur vocal IA — Choupi</h3>
+          <h3>Tuteur personalisé</h3>
           <p>
-            Un hibou qui parle à voix haute avec votre enfant. Interface
-            naturelle, sans clavier — idéal pour les 6 à 14 ans.
+            Un tuteur IA qui s'adapte au style d'apprentissage de votre enfant
+            et évolue avec lui durant son parcours scolaire.
           </p>
         </div>
         <div class="solution-card">
@@ -1280,7 +1270,7 @@
       <div class="how-steps-row">
         <div class="how-step">
           <div class="how-step-circle"><i class="ph ph-books"></i></div>
-          <div class="how-step-num">Étape 01</div>
+          <div class="how-step-num">Étape 1</div>
           <h3>Déposer le matériel</h3>
           <p>
             Le parent ou l'enseignant dépose les notes de cours, devoirs ou
@@ -1289,7 +1279,7 @@
         </div>
         <div class="how-step">
           <div class="how-step-circle"><i class="ph ph-brain"></i></div>
-          <div class="how-step-num">Étape 02</div>
+          <div class="how-step-num">Étape 2</div>
           <h3>L'IA apprend</h3>
           <p>
             Professeur Pixel analyse le matériel et crée une base de
@@ -1297,17 +1287,8 @@
           </p>
         </div>
         <div class="how-step">
-          <div class="how-step-circle"><i class="ph ph-owl"></i></div>
-          <div class="how-step-num">Étape 03</div>
-          <h3>L'enfant parle à Choupi</h3>
-          <p>
-            L'élève pose ses questions à voix haute et reçoit des explications
-            claires et encourageantes.
-          </p>
-        </div>
-        <div class="how-step">
           <div class="how-step-circle"><i class="ph ph-trend-up"></i></div>
-          <div class="how-step-num">Étape 04</div>
+          <div class="how-step-num">Étape 3</div>
           <h3>Les parents suivent</h3>
           <p>
             Après chaque séance, le tableau de bord parent est mis à jour avec
@@ -1335,7 +1316,7 @@
           <ul class="audience-list">
             <li>Aide aux devoirs 24h/24</li>
             <li>Basé sur les vraies notes de classe</li>
-            <li>Rapport de progression hebdomadaire</li>
+            <li>Rapport de progression</li>
             <li>Moins cher qu'une heure de tuteur</li>
           </ul>
         </div>
@@ -1358,13 +1339,13 @@
 
     <section class="subscribe-section" id="prevente">
       <div class="subscribe-badge">
-        Offre prévente — <span>147 places restantes</span>
+        Offre prévente <span>60 % de rabais à vie</span>
       </div>
       <h2 class="section-title">
         Soyez parmi les <em>premiers</em><br />à rejoindre Professeur Pixel
       </h2>
       <p class="subscribe-desc">
-        Inscrivez-vous maintenant pour bloquer votre accès prioritaire à prix
+        Inscrivez-vous maintenant pour avoir votre accès prioritaire à prix
         fondateur — un rabais exclusif réservé aux familles qui nous font
         confiance dès le départ.
       </p>
@@ -1372,15 +1353,7 @@
       <div class="perks-row">
         <div class="perk-pill">60 % de rabais à vie</div>
         <div class="perk-pill">Accès prioritaire au lancement</div>
-        <div class="perk-pill">Infolettre mensuelle exclusive</div>
         <div class="perk-pill">Influence sur les fonctionnalités</div>
-      </div>
-
-      <div class="progress-wrap">
-        <div class="progress-track"><div class="progress-fill"></div></div>
-        <div class="progress-label">
-          <strong>853 / 1 000 places</strong> réservées — il en reste 147
-        </div>
       </div>
 
       <div id="formWrap">
@@ -1391,19 +1364,10 @@
               font-size: 18px;
               font-weight: 700;
               color: var(--white);
-              margin-bottom: 6px;
+              margin-bottom: 24px;
             "
           >
             Réserver ma place en prévente
-          </div>
-          <div
-            style="
-              font-size: 13px;
-              color: rgba(255, 255, 255, 0.4);
-              margin-bottom: 28px;
-            "
-          >
-            Rejoignez 853 familles déjà inscrites sur la liste d'attente
           </div>
 
           <div class="form-grid">
@@ -1465,41 +1429,19 @@
               En m'inscrivant, je confirme faire partie de la liste de prévente
               de Professeur Pixel et comprends que je bénéficierai d'un
               <strong>rabais exclusif de 60 % à vie</strong> sur mon abonnement
-              lors du lancement. J'accepte de recevoir
-              <strong>une infolettre mensuelle</strong> avec les mises à jour.
-              Je peux me désinscrire à tout moment. Données protégées
-              conformément à la <a href="#">Loi 25 du Québec</a>.
+              lors du lancement. Je peux me désinscrire à tout moment.
             </p>
           </div>
 
           <button class="subscribe-btn" onclick="submitForm()">
-            Réserver ma place — Gratuit et sans engagement
+            Réserver ma place
           </button>
-          <div class="form-note">
-            Aucune carte de crédit requise. Aucun engagement. Vos données ne
-            seront jamais vendues.
-          </div>
         </div>
       </div>
 
       <div class="success-msg" id="successMsg">
         ✦ &nbsp;Votre place est réservée ! Nous vous contacterons bientôt avec
         vos accès fondateur.
-      </div>
-
-      <div class="post-stats">
-        <div>
-          <div class="post-stat-num">853</div>
-          <div class="post-stat-label">Familles inscrites</div>
-        </div>
-        <div>
-          <div class="post-stat-num">147</div>
-          <div class="post-stat-label">Places restantes</div>
-        </div>
-        <div>
-          <div class="post-stat-num">60%</div>
-          <div class="post-stat-label">De rabais garanti</div>
-        </div>
       </div>
     </section>
 
@@ -1533,7 +1475,7 @@
           </p>
         </div>
         <div class="investor-stat">
-          <div class="investor-stat-num">$0</div>
+          <div class="investor-stat-num">0$</div>
           <h3>Frais de transaction vs tuteurs humains</h3>
           <p>
             Modèle SaaS à abonnement générant des revenus récurrents prévisibles
@@ -1542,24 +1484,24 @@
         </div>
       </div>
       <div class="investor-models">
-        <div class="investor-model">
-          <div class="investor-model-tag">B2C</div>
+        <div class="investor-stat">
+          <div class="investor-stat-num">B2C</div>
           <h3>Familles — abonnement mensuel direct</h3>
           <p>
             Acquisition directe via les parents, avec coûts réduits grâce au
             bouche-à-oreille scolaire.
           </p>
         </div>
-        <div class="investor-model">
-          <div class="investor-model-tag">B2B</div>
+        <div class="investor-stat">
+          <div class="investor-stat-num">B2B</div>
           <h3>Écoles et commissions scolaires</h3>
           <p>
             Contrats institutionnels à haute valeur avec cycles de
             renouvellement annuels et faible churn.
           </p>
         </div>
-        <div class="investor-model">
-          <div class="investor-model-tag">B2G</div>
+        <div class="investor-stat">
+          <div class="investor-stat-num">B2G</div>
           <h3>Subventions gouvernementales</h3>
           <p>
             Notre mission d'équité s'aligne directement avec les programmes du
@@ -1567,14 +1509,14 @@
           </p>
         </div>
       </div>
-      <div class="investor-cta">
+      <!-- <div class="investor-cta">
         <p>
           Vous souhaitez en savoir plus sur les opportunités d'investissement ?
         </p>
         <a href="mailto:investisseurs@professeurpixel.ca" class="btn-outline">
           Nous contacter — investisseurs@professeurpixel.ca
         </a>
-      </div>
+      </div> -->
     </section>
 
     <footer>
@@ -1583,31 +1525,9 @@
         >© 2026 Professeur Pixel Inc. — Montréal, Québec. Tous droits
         réservés.</span
       >
-      <ul class="footer-links">
-        <li><a href="#">Confidentialité</a></li>
-        <li><a href="#">Conditions</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
     </footer>
 
     <script>
-      // ─────────────────────────────────────────────────────────
-      // GOOGLE FORMS SETUP
-      //
-      // 1. Create a Google Form with these fields:
-      //    - Prénom (Short answer)
-      //    - Nom de famille (Short answer)
-      //    - Adresse courriel (Short answer)
-      //    - Vous êtes (Dropdown)
-      //    - Ville (Short answer)
-      //
-      // 2. Click ⋮ → "Get pre-filled link", fill dummy values,
-      //    copy the resulting URL, then extract:
-      //    - FORM_ID (between /d/e/ and /viewform)
-      //    - Each entry ID (entry.XXXXXXXXXX)
-      //
-      // 3. Replace the values below:
-      // ─────────────────────────────────────────────────────────
       const GOOGLE_FORM_ACTION =
         "https://docs.google.com/forms/d/e/1FAIpQLSfa6bbJ_3QekIMU18-ewP9UtkIhOoZFp3A9vCReKYMtgDWwOA/formResponse";
 
